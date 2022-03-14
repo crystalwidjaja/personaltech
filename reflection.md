@@ -1,0 +1,3 @@
+# What I can Do with Tech to Improve mine or others Education
+
+Technology is most important in providing accessible information to those around you. I think the best way for me and my peers to utilize technology is by taking advantage of our resources. With the increase of AI and databases, it is easy to learn about different subjects on your own. My eagerness for learning is amplified and encouraged by the internet. Furthermore, I plan to use technology as documentation for my educational endeavors so that I could look back and reflect in the future. Our group's plans of making a website will be our documentation through our education of computer science and programming. Through these means, me and my group will use technology to improve our education.
