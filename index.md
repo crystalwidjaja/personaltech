@@ -1,3 +1,12 @@
-{% include nav.html %}
+<p style="text-align: center; background-color: white;">
+  <a href="{{site.baseurl}}/">Home</a> |
+  <a href="{{site.baseurl}}/admin/">Code</a> | 
+  <a href="{{site.baseurl}}/schedule/week_1/">Week 1</a> | 
+  <a href="{{site.baseurl}}/schedule/week_2/">Week 2</a> | 
+  <a href="{{site.baseurl}}/schedule/week_3/">Week 3</a> | 
+  <a href="{{site.baseurl}}/general/">Tech Talks</a>
+</p>
 
-{% include_relative README.md %}
+# Work of the Week
+
+[Week 0](https://github.com/crystalwidjaja/personaltech/issues/1)
