@@ -7,8 +7,6 @@ layout: default
 
 
 # Code from Repls
-
-
 <table>
   <tr>
     <th>Description</th>
