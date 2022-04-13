@@ -3,46 +3,46 @@ import java.util.Iterator;
 
 public class Queue<T> implements Iterable<T> {
     LinkedList<T> head, tail;
-    // create Queue code
+    // create Queue
     public void add(T data) {
         // add new object to end of Queue
         LinkedList<T> tail = new LinkedList<>(data, null);
 
-        if (head == null)  // initial condition
+        if (head == null)  
             this.head = this.tail = tail;
-        else {  // nodes in queue
+        else {  
             this.tail.setNextNode(tail); // current tail points to new tail
             this.tail = tail;  // update tail
         }
     }
-    // returns the head of the linked list
+    // returns head
     public LinkedList<T> getHead() {
         return this.head;
     }
-    // returns the tail of the linked list
+    // returns tail
     public LinkedList<T> getTail() {
         return this.tail;
     }
-    // this is the iterator
+    // iterator
     public Iterator<T> iterator() {
         return new QueueIterator<>(this);
     }
 }
 
 class QueueIterator<T> implements Iterator<T> {
-    LinkedList<T> current;  // current element in iteration
+    LinkedList<T> current; 
 
     // QueueIterator is intended to the head of the list for iteration
     public QueueIterator(Queue<T> q) {
         current = q.getHead();
     }
 
-    // hasNext informs if next element exists
+    // Does next element exists
     public boolean hasNext() {
         return current != null;
     }
 
-    // next returns data object and advances to next position in queue
+    // returns data object & advances to next position in queue
     public T next() {
         T data = current.getData();
         current = current.getNext();
@@ -50,37 +50,24 @@ class QueueIterator<T> implements Iterator<T> {
     }
 }
 
-/**
- * Queue Manager
- * 1. "has a" Queue
- * 2. support management of Queue tasks (aka: titling, adding a list, printing)
- */
 class QueueManager<T> {
     // queue data
-    private final String name; // name of queue
-    private int count = 0; // number of objects in queue
+    private final String name; 
+    private int count = 0;
     public final Queue<T> queue = new Queue<>(); // queue object
 
-    /**
-     *  Queue constructor
-     *  Title with empty queue
-     */
+    // Queue Constructor
     public QueueManager(String name) {
         this.name = name;
     }
 
-    /**
-     *  Queue constructor
-     *  Title with series of Arrays of Objects
-     */
+    // Queue Constructor
     public QueueManager(String name, T[]... seriesOfObjects) {
         this.name = name;
         this.addList(seriesOfObjects);
     }
 
-    /**
-     * Print any array objects from queue
-     */
+    // Print Array
     public void addList(T[]... seriesOfObjects)
     {
         for (T[] objects: seriesOfObjects)
@@ -91,7 +78,7 @@ class QueueManager<T> {
                 this.printQueue();
             }
     }
-
+  // Print Queue
     public void printQueue() {
         System.out.println(this.name + " count: " + count);
         System.out.print(this.name + " data: ");
