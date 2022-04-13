@@ -1,7 +1,4 @@
-// Week 1, Challange 1: Add and remove elements from a queue
-
-// import packages
-package src;
+package queues;
 import java.util.LinkedList;
 import java.util.Queue;
 

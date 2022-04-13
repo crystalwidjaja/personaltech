@@ -1,4 +1,4 @@
-package src;
+package queues;
 import java.util.Iterator;
 
 public class Queue<T> implements Iterable<T> {
@@ -79,17 +79,6 @@ class QueueManager<T> {
     }
 
     /**
-     * Add a list of objects to queue
-     */
-    public void addList(T[]... seriesOfObjects) {
-        for (T[] objects: seriesOfObjects)
-            for (T data : objects) {
-                this.queue.add(data);
-                this.count++;
-            }
-    }
-
-    /**
      * Print any array objects from queue
      */
     public void addList(T[]... seriesOfObjects)
@@ -101,17 +90,6 @@ class QueueManager<T> {
                 this.count++;
                 this.printQueue();
             }
-    }
-
-    public void deleteList()
-    {
-        while (this.queue.head != null) { // if the queue head exists
-            this.queue.delete();
-
-            this.count--;
-            this.printQueue();
-
-        }
     }
 
     public void printQueue() {

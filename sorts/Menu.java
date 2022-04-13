@@ -1,4 +1,4 @@
-package src;
+package Sorts;
 
 import java.util.HashMap;
 import java.util.Map;

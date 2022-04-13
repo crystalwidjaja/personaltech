@@ -1,5 +1,4 @@
-// import packages
-package src;
+package queues;
 import java.util.LinkedList;
 import java.util.Queue;
 

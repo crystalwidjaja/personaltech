@@ -4,9 +4,9 @@ import java.util.Random;
 
 class MergeSort 
 {
-  private static int comparisons;
-  private static int swaps; 
-
+    // Merges two subarrays of arr[].
+    // First subarray is arr[l..m]
+    // Second subarray is arr[m+1..r]
     void merge(int arr[], int l, int m, int r)
     {
         // Find sizes of two subarrays to be merged
@@ -29,7 +29,6 @@ class MergeSort
         // Initial index of merged subarray array
         int k = l;
         while (i < n1 && j < n2) {
-            swaps++;
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
@@ -65,7 +64,6 @@ class MergeSort
             int m =l+ (r-l)/2;
   
             // Sort first and second halves
-            comparisons++; 
             sort(arr, l, m);
             sort(arr, m + 1, r);
   
@@ -73,39 +71,28 @@ class MergeSort
             merge(arr, l, m, r);
         }
     }
-
-      static void printArray(int arr[])
+  
+    /* A utility function to print array of size n */
+    static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
         System.out.println();
     }
-
-	// Driver method
-	public static void main(String args[])
-	{
-     System.out.println("\nMERGE SORT: ");
-    long startTime = System.nanoTime();
-    int[] arr = new int[5000];
-    for (int i = 0; i < 5000; i++) { 
-      Random rand = new Random(); //instance of random class
-      int randNum = rand.nextInt(100);
-      arr[i] = randNum;  
-    }
-
-    // merge sort the array
-		MergeSort ob = new MergeSort();
-		ob.sort(arr, 0, arr.length - 1);
-
-    // Figure out start and end times and print average
-    long endTime = System.nanoTime();
-    long duration = (endTime - startTime);
-    System.out.println("Merge Sort Duration: " + duration + " nanoseconds");
-		System.out.println("Low = " + arr[0]);
-    System.out.println("High = " + arr[arr.length-1]);
-    System.out.println("Swaps = " + swaps);
-    System.out.println("Comparisons = " + comparisons);
-
+  
+    // Driver code
+    public static void main(String args[])
+    {
+        int arr[] = { 12, 11, 13, 5, 6, 7 };
+  
+        System.out.println("Given Array");
+        printArray(arr);
+  
+        MergeSort ob = new MergeSort();
+        ob.sort(arr, 0, arr.length - 1);
+  
+        System.out.println("\nSorted array");
+        printArray(arr);
     }
 }
