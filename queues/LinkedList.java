@@ -5,12 +5,8 @@ public class LinkedList<T>
     private T data;
     private LinkedList<T> prevNode, nextNode;
 
-    /**
-     *  Constructs a new element
-     *
-     * @param  data, data of object
-     * @param  node, previous node
-     */
+    // Constructs a new element
+
     public LinkedList(T data, LinkedList<T> node)
     {
         this.setData(data);
@@ -18,11 +14,7 @@ public class LinkedList<T>
         this.setNextNode(null);
     }
 
-    /**
-     *  Clone an object,
-     *
-     * @param  node  object to clone
-     */
+    // Clone Object
     public LinkedList(LinkedList<T> node)
     {
         this.setData(node.data);
@@ -30,62 +22,38 @@ public class LinkedList<T>
         this.setNextNode(node.nextNode);
     }
 
-    /**
-     *  Setter for T data in DoubleLinkedNode object
-     *
-     * @param  data, update data of object
-     */
+    // Setter
     public void setData(T data)
     {
         this.data = data;
     }
 
-    /**
-     *  Returns T data for this element
-     *
-     * @return  data associated with object
-     */
+    // Return Data
     public T getData()
     {
         return this.data;
     }
 
-    /**
-     *  Setter for prevNode in DoubleLinkedNode object
-     *
-     * @param node, prevNode to current Object
-     */
+    // Setter
     public void setPrevNode(LinkedList<T> node)
     {
         this.prevNode = node;
     }
 
-    /**
-     *  Setter for nextNode in DoubleLinkedNode object
-     *
-     * @param node, nextNode to current Object
-     */
+    // Setter
     public void setNextNode(LinkedList<T> node)
     {
         this.nextNode = node;
     }
 
 
-    /**
-     *  Returns reference to previous object in list
-     *
-     * @return  the previous object in the list
-     */
+    // Return
     public LinkedList<T> getPrevious()
     {
         return this.prevNode;
     }
 
-    /**
-     *  Returns reference to next object in list
-     *
-     * @return  the next object in the list
-     */
+    // Return
     public LinkedList<T> getNext()
     {
         return this.nextNode;
