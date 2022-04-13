@@ -1,9 +1,8 @@
-// import packages
 package queues;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// the orderedQueues class
+// orderedQueues class
 public class Combine {
 
     public static void main(String[] args)
@@ -12,11 +11,11 @@ public class Combine {
         Queue<Integer> queue2 = new LinkedList<>();
         Queue<Integer> merged = new LinkedList<>();
 
-        // define the array with an array literal
+        // define array
         int[] array1 = new int[]{ 3, 7, 10, 12 };
         int[] array2 = new int[]{ 4, 8, 11, 52 };
 
-        // create the two queues
+        // create  two queues
         for (int addInt : array1){
             queue1.add(addInt);
         }
@@ -28,7 +27,7 @@ public class Combine {
         System.out.println(queue1);
         System.out.println(queue2);
 
-        // merge into a singular queue
+        // merge queues
         for (int i = 0; i < 4; i++){
             int num1 = queue1.remove();
             int num2 = queue2.remove();
@@ -42,7 +41,7 @@ public class Combine {
             }
         }
 
-        // print out the merged queue
+        // print merged queue
         System.out.println("\nHere is the merged queue:");
         System.out.println(merged + "\n");
     }
