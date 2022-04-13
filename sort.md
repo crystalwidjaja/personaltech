@@ -33,3 +33,9 @@ In the case of the sorts we focused on, the general formula for each sort can be
 | Selection Sort | O(n^2) |
 
 Our results from the [code](https://replit.com/@CrystalWidjaja/Sorts#src/MergeSort.java) I constructed indicate that the insertion sort is the fastest and selection sort is the slowest. Merge sort and Bubble sort are relatively the same with merge being a tad faster. This aligns with the equations used to describe each of the sorts.
+
+Specific Data From Code is Provided Here:
+
+![image](https://user-images.githubusercontent.com/72881876/163118215-f1fadd28-1926-4230-afe0-b7e1031d452b.png)
+
+![image](https://user-images.githubusercontent.com/72881876/163118284-326df0be-2f90-48e6-af8c-d4ddf82d394a.png)
