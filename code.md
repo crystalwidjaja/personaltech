@@ -1,6 +1,6 @@
 # Individual Tech Requirements:
 
-Final Grade Calculator
+## Final Grade Calculator
 - Passes in three variables: current, desired, and percent
 - Current refers to the current grade, desired refers to the desired grade, and percent refers to the percentage that a final is worth
 - From there, we create weight which turns the percent into a decimal value that we can then use to calculate the requiredGrade
@@ -8,6 +8,8 @@ Final Grade Calculator
 - There is a section of code that rounds the percentage needed to the nearest hundreth.
 
 Required Grade Calculation Logic: takes the weight and inverses it and multiplies it by current - This creates the points that an individual has already earned in the class. From there, we divide this value by the weight to essentially inflate the value to include the total points an individual has. Finally we remove the desired outcome from these inflated points to get the percentage needed on a final exam.
+
+[Front End](https://github.com/avabrooks/swagketo/blob/master/src/main/resources/templates/services/resume.html)
 
 Back End:
 ```
@@ -23,9 +25,7 @@ Back End:
     }
 ```
 
-[Front End](https://github.com/avabrooks/swagketo/blob/master/src/main/resources/templates/services/resume.html):
-
-Requirements Page
+## Requirements Page
  - The requirements page was originaly seen as an easy feat, but was then proven to be extremely difficult.
  - Surprisngly, the backend was the easiest part. I created doubles for each of the required fields.
  - The variables are easily manipulated using input boxes that are the same as the grade calculator. 
@@ -38,6 +38,8 @@ The Percentage Box Journey: I found a stylized loading box which I used as a tem
                 <div th:style="'width:' + ${english} + '%'" class="skill php" th:text="${english} + '%'"></div>
             </div>
 ```
+
+[Front End](https://github.com/avabrooks/swagketo/blob/master/src/main/resources/templates/services/requirements.html)
 
 Back End:
 
@@ -74,5 +76,3 @@ Back End:
         return "/services/requirements";
     }
 ```
-[Front End](https://github.com/avabrooks/swagketo/blob/master/src/main/resources/templates/services/requirements.html)
-
